@@ -1,0 +1,194 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       Курсы GLO!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2020 wadimka. All Rights Reserved.
+ * @authors       Вадим
+ *------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Proxima Nova - Semibold';
+    src: url('font/ProximaNova-Semibold.eot');
+    src: local('font/Proxima Nova Semibold'), local('font/ProximaNova-Semibold'),
+        url('font/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('font/ProximaNova-Semibold.woff') format('woff'),
+        url('font/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('font/ProximaNova-Regular.eot');
+    src: local('font/Proxima Nova Regular'), local('font/ProximaNova-Regular'),
+        url('font/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/ProximaNova-Regular.woff') format('woff'),
+        url('font/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.propose,
+.additional {
+    font-family: "Proxima Nova";
+    background-color: #006a00;
+}
+
+.servis-cards,
+.extra-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title,
+.subtitle {
+    text-align: center;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 120px;
+}
+
+.subtitle {
+    font-weight: 400;
+    margin-bottom: 70px;
+}
+
+.propose__subtitle--size {
+    font-size: 18px;
+}
+
+.propose__servis-cards {
+    padding-bottom: 97px;
+}
+
+.servis-cards>div,
+/*Блин, ну нельзя же самому блоку задавать отступы!))*/
+.extra-cards>div {
+    /*либо использовать .propose__servis-cards ? */
+    margin: 20px;
+}
+
+.card {
+    /*По логике нужно оставить главным такой блок, и дальше корректировать элементами*/
+    position: relative;
+    width: 400px;
+    height: 660px;
+    box-shadow: 0 14px 21px rgba(0, 0, 0, 0.17);
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.extra-cards__card {
+    height: 350px;
+    box-shadow: unset;
+    background-color: transparent;
+    margin-bottom: 90px;
+}
+
+.card__title {
+    color: #1a1820;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.card__price {
+    color: #1a1820;
+    font-family: "Proxima Nova";
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 37px auto;
+}
+
+.card__price span {
+    font-size: 30px;
+}
+
+.card__list ul {
+    padding: 0px;
+}
+
+.card__list li {
+    display: block;
+    line-height: 30px;
+    color: #1a1820;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card__list li img {
+    margin-right: 10px;
+}
+
+.card__list--add li {
+    /*Для последней, дополнительной третьей секции))*/
+    background-image: url("img/checked.png");
+    background-repeat: no-repeat;
+    display: block;
+    background-position-x: 10%;
+    background-position-y: 40%;
+}
+
+.card__list--add {
+    text-align: left;
+    text-indent: 70px;
+}
+
+.card__button {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -105px;
+}
+
+.extra-cards .card__button {
+    position: static;
+    margin: 50px auto 122px auto;
+}
+
+.card__button--order {
+    color: #ffffff;
+    font-family: 'Proxima Nova - Semibold';
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 25px 60px;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    border: 1px solid #ffba15;
+    background-color: #ffb504;
+    background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%);
+}
+
+@media (min-width: 412px)and (max-width: 600px) {
+    .card {
+        width: 50%;
+        max-width: 50%;
+        flex: 50%;
+        padding: 1%;
+    }
+}
+
+@media (max-width: 411px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+        flex: 100%;
+        padding: 1%;
+    }
+}
